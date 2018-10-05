@@ -1,0 +1,429 @@
+body {
+  background-color: #f4f4f4;
+  margin: 0 0 0 0;
+  font-family: 'Oswald', sans-serif; }
+
+p {
+  margin: 0 0 0 0; }
+
+.subtitle {
+  color: #fea901;
+  font-size: 0.8rem;
+  font-weight: 500; }
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 2rem; }
+
+nav {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 10vh; }
+  nav .nav-list {
+    list-style: none; }
+    nav .nav-list .nav-item {
+      display: inline;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-weight: 500; }
+      nav .nav-list .nav-item a {
+        text-decoration: none;
+        color: #898989; }
+      nav .nav-list .nav-item a:hover {
+        color: #fea901; }
+
+.cover {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  background-color: black;
+  background-image: url(../assets/gym-trainer.jpg);
+  background-image: url(../assets/gym-trainer.jpg), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: 0% 40%;
+  background-repeat: no-repeat; }
+  .cover .filter {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
+  .cover h1 {
+    color: white;
+    font-size: 4.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500; }
+
+.classes {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 5rem 0rem 5rem 0rem; }
+  .classes .title {
+    color: #333333; }
+  .classes .grid-container {
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center; }
+    .classes .grid-container .class-filter {
+      text-decoration: none;
+      color: #fea901;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: none; }
+      .classes .grid-container .class-filter img {
+        height: 0.5rem;
+        margin-left: 0.25rem; }
+    .classes .grid-container .class-filter:hover {
+      cursor: pointer; }
+    .classes .grid-container .class-filter:focus {
+      outline: none; }
+    .classes .grid-container select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: url("../assets/dropdown.png") no-repeat 100% 50%;
+      background-size: 11px 7px;
+      width: 4.25rem; }
+    .classes .grid-container .class-cards-grid {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr; }
+      .classes .grid-container .class-cards-grid .class-card {
+        background-color: #ffffff;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        height: 66vh;
+        width: 16rem;
+        overflow: hidden; }
+        .classes .grid-container .class-cards-grid .class-card .card-img-container {
+          height: 50%;
+          overflow: hidden; }
+          .classes .grid-container .class-cards-grid .class-card .card-img-container img {
+            height: 100%; }
+        .classes .grid-container .class-cards-grid .class-card .card-info-container {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+          box-sizing: border-box; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container h3 {
+            color: #333333;
+            font-size: 1rem;
+            margin-top: 0; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-around; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info p {
+              font-size: 0.66rem;
+              color: #898989;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-price {
+              color: #fea901;
+              font-size: 2rem;
+              font-weight: 500;
+              font-family: 'Oswald', sans-serif;
+              width: 33%;
+              text-align: center; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-instructor {
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              justify-content: center;
+              width: 34%;
+              margin-bottom: 0.5rem; }
+              .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-instructor .instructor-img {
+                overflow: hidden;
+                height: 2.5rem;
+                width: 2.5rem;
+                margin-bottom: 0.5rem;
+                border-radius: 50%; }
+                .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-instructor .instructor-img img {
+                  width: 100%;
+                  min-height: 100%; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-rating {
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              justify-content: center;
+              width: 33%; }
+              .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-rating .stars {
+                width: 100%;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: center; }
+                .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-rating .stars img {
+                  width: 0.66rem;
+                  margin: 0.10rem; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .full-class-btn {
+            background-color: #e0e0e0;
+            color: #a3a3a3;
+            border-radius: 5rem;
+            border: none;
+            font-size: 0.6rem;
+            font-weight: 500;
+            font-family: 'Oswald', sans-serif;
+            width: 7rem;
+            height: 2.25rem;
+            transition: all 0.5s;
+            margin-top: 0.75rem;
+            margin-bottom: 1rem; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .full-class-btn:hover {
+            cursor: pointer;
+            background-color: #333333; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .full-class-btn:focus {
+            outline: none; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .class-schedule {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 0.5rem;
+            color: #898989;
+            margin-bottom: 0.5rem; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .class-schedule img {
+              height: 0.5rem;
+              margin-left: 0.5rem;
+              margin-right: 0.5rem; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container hr {
+            border: 2px solid #fea901;
+            border-radius: 5rem;
+            width: 95%; }
+      .classes .grid-container .class-cards-grid .hidden-card {
+        display: none; }
+  .classes .view-more-btn {
+    background-color: transparent;
+    border: 2px solid #fea901;
+    border-radius: 5rem;
+    color: #898989;
+    font-size: 0.75rem;
+    font-family: 'Oswald', sans-serif;
+    width: 10rem;
+    height: 3rem;
+    transition: all 0.5s; }
+  .classes .view-more-btn:hover {
+    cursor: pointer;
+    background-color: #fea901;
+    color: #ffffff; }
+  .classes .view-more-btn:focus {
+    outline: none; }
+
+.trainers {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 66vh;
+  background-image: url("../assets/gym-woman.jpg");
+  background-size: cover;
+  background-position: 0% 40%;
+  background-repeat: no-repeat; }
+  .trainers .filter {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
+  .trainers .trainer-cards-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 20%;
+    padding-right: 20%; }
+    .trainers .trainer-cards-grid .trainer-card {
+      background-color: rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      padding: 1.5rem;
+      border: 2px solid transparent;
+      text-align: center;
+      transition: all 0.5s; }
+      .trainers .trainer-cards-grid .trainer-card .trainer-icon {
+        height: 4rem; }
+      .trainers .trainer-cards-grid .trainer-card h3 {
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem; }
+      .trainers .trainer-cards-grid .trainer-card p {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 300; }
+    .trainers .trainer-cards-grid .trainer-card:hover {
+      cursor: pointer;
+      border: 2px solid #fea901;
+      transform: translateY(-1rem); }
+
+.schedule {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+  .schedule .grid-container {
+    width: 100%; }
+    .schedule .grid-container .schedule-filter {
+      text-decoration: none;
+      color: #fea901;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 1rem; }
+    .schedule .grid-container .week-input {
+      text-decoration: none;
+      color: #fea901;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: none;
+      transition: all 0.5s; }
+    .schedule .grid-container .week-input:focus {
+      outline: none; }
+    .schedule .grid-container .schedule-grid {
+      display: grid;
+      grid-gap: 0.15rem;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 5vh;
+      grid-auto-rows: 12.5vh; }
+      .schedule .grid-container .schedule-grid .day-name {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: #fea901;
+        color: #ffffff; }
+      .schedule .grid-container .schedule-grid .hour {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: #e5e5e5;
+        transition: all 0.5s; }
+      .schedule .grid-container .schedule-grid .hour:hover {
+        background-color: #333333;
+        color: #ffffff; }
+
+.testimonials {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #333333;
+  height: 66vh;
+  overflow: hidden; }
+  .testimonials .testimonials-img-container {
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.5s; }
+    .testimonials .testimonials-img-container img {
+      min-width: 100%;
+      height: 100%;
+      transition: all 0.5s; }
+  .testimonials .testimonials-info-container {
+    box-sizing: border-box;
+    width: 55%;
+    height: 100%;
+    padding: 5rem 10rem 5rem 10rem;
+    transition: all 0.5s; }
+    .testimonials .testimonials-info-container .title {
+      color: #ffffff; }
+    .testimonials .testimonials-info-container .testimonial-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #ffffff;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.5s; }
+    .testimonials .testimonials-info-container .testimonial-name {
+      color: #fea901;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.5s; }
+
+.feedback {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center; }
+  .feedback .feedback-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; }
+    .feedback .feedback-form .feedback-data {
+      background-color: transparent;
+      border: 3px solid #000000;
+      width: 27.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      vertical-align: text-top;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      padding: 0.5rem; }
+    .feedback .feedback-form .feedback-data:focus {
+      outline: none; }
+    .feedback .feedback-form .name-input {
+      height: 1.25rem; }
+    .feedback .feedback-form .feedback-textarea {
+      resize: none; }
+    .feedback .feedback-form .send-btn {
+      height: 2.25rem;
+      width: 25rem;
+      border: none;
+      background-color: #fea901;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.75);
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.5s; }
+    .feedback .feedback-form .send-btn:hover {
+      cursor: pointer;
+      color: #ffffff; }

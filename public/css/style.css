@@ -1,0 +1,566 @@
+@-webkit-keyframes pulse {
+  20% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@-moz-keyframes pulse {
+  20% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@-o-keyframes pulse {
+  20% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes pulse {
+  20% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+body {
+  background-color: #f4f4f4;
+  margin: 0 0 0 0;
+  font-family: 'Oswald', sans-serif; }
+
+p {
+  margin: 0 0 0 0; }
+
+.subtitle {
+  color: #fea901;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center; }
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center; }
+
+#scroll-up {
+  bottom: 1vh;
+  transform: translateX(-110%);
+  position: fixed;
+  transition: all 0.5s;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid #fea901;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem; }
+  #scroll-up img {
+    width: 2rem;
+    display: block;
+    -webkit-animation: pulse 1s infinite;
+    /* Safari 4+ */
+    -moz-animation: pulse 1s infinite;
+    /* Fx 5+ */
+    -o-animation: pulse 1s infinite;
+    /* Opera 12+ */
+    animation: pulse 1s infinite;
+    /* IE 10+, Fx 29+ */ }
+
+#scroll-up:hover {
+  cursor: pointer;
+  background-color: black; }
+
+nav {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 10vh; }
+  nav .nav-list {
+    list-style: none;
+    padding: 0 0 0 0; }
+    nav .nav-list .nav-item {
+      display: inline;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-weight: 500; }
+      nav .nav-list .nav-item a {
+        text-decoration: none;
+        color: #898989;
+        transition: all 0.2s; }
+      nav .nav-list .nav-item a:hover {
+        color: #fea901; }
+
+.cover {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  background-color: black;
+  background-image: url(../assets/gym-trainer.jpg);
+  background-image: url(../assets/gym-trainer.jpg), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: 0% 40%;
+  background-repeat: no-repeat; }
+  .cover .filter {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
+  .cover h1 {
+    color: white;
+    font-size: 4.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    text-align: center; }
+
+.classes {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 5rem 0rem 5rem 0rem; }
+  .classes .title {
+    color: #333333; }
+  .classes .grid-container {
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center; }
+    .classes .grid-container .class-filter {
+      text-decoration: none;
+      color: #fea901;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: none; }
+      .classes .grid-container .class-filter img {
+        height: 0.5rem;
+        margin-left: 0.25rem; }
+    .classes .grid-container .class-filter:hover {
+      cursor: pointer; }
+    .classes .grid-container select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: url("../assets/dropdown.png") no-repeat 100% 50%;
+      background-size: 11px 7px;
+      width: 4.25rem; }
+    .classes .grid-container .class-cards-grid {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr; }
+      .classes .grid-container .class-cards-grid .class-card {
+        background-color: #ffffff;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        height: 66vh;
+        width: 16rem;
+        overflow: hidden; }
+        .classes .grid-container .class-cards-grid .class-card .card-img-container {
+          height: 50%;
+          overflow: hidden; }
+          .classes .grid-container .class-cards-grid .class-card .card-img-container img {
+            height: 100%; }
+        .classes .grid-container .class-cards-grid .class-card .card-info-container {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+          box-sizing: border-box; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container h3 {
+            color: #333333;
+            font-size: 1rem;
+            margin-top: 0; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-around; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info p {
+              font-size: 0.66rem;
+              color: #898989;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-price {
+              color: #fea901;
+              font-size: 2rem;
+              font-weight: 500;
+              font-family: 'Oswald', sans-serif;
+              width: 33%;
+              text-align: center; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-instructor {
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              justify-content: center;
+              width: 34%;
+              margin-bottom: 0.5rem; }
+              .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-instructor .instructor-img {
+                overflow: hidden;
+                height: 2.5rem;
+                width: 2.5rem;
+                margin-bottom: 0.5rem;
+                border-radius: 50%; }
+                .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-instructor .instructor-img img {
+                  width: 100%;
+                  min-height: 100%; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-rating {
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              justify-content: center;
+              width: 33%; }
+              .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-rating .stars {
+                width: 100%;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: center; }
+                .classes .grid-container .class-cards-grid .class-card .card-info-container .main-info .class-rating .stars img {
+                  width: 0.66rem;
+                  margin: 0.10rem; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .full-class-btn {
+            background-color: #e0e0e0;
+            color: #a3a3a3;
+            border-radius: 5rem;
+            border: none;
+            font-size: 0.6rem;
+            font-weight: 500;
+            font-family: 'Oswald', sans-serif;
+            width: 7rem;
+            height: 2.25rem;
+            transition: all 0.5s;
+            margin-top: 0.75rem;
+            margin-bottom: 1rem; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .full-class-btn:hover {
+            cursor: pointer;
+            background-color: #333333; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container .class-schedule {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 0.5rem;
+            color: #898989;
+            margin-bottom: 0.5rem; }
+            .classes .grid-container .class-cards-grid .class-card .card-info-container .class-schedule img {
+              height: 0.5rem;
+              margin-left: 0.5rem;
+              margin-right: 0.5rem; }
+          .classes .grid-container .class-cards-grid .class-card .card-info-container hr {
+            border: 2px solid #fea901;
+            border-radius: 5rem;
+            width: 95%; }
+      .classes .grid-container .class-cards-grid .hidden-card {
+        display: none; }
+  .classes .view-more-btn {
+    background-color: transparent;
+    border: 2px solid #fea901;
+    border-radius: 5rem;
+    color: #898989;
+    font-size: 0.75rem;
+    font-family: 'Oswald', sans-serif;
+    width: 10rem;
+    height: 3rem;
+    transition: all 0.5s; }
+  .classes .view-more-btn:hover {
+    cursor: pointer;
+    background-color: #fea901;
+    color: #ffffff; }
+
+.trainers {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 66vh;
+  background-image: url("../assets/gym-woman.jpg");
+  background-size: cover;
+  background-position: 0% 40%;
+  background-repeat: no-repeat;
+  box-sizing: border-box; }
+  .trainers .filter {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 66vh;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
+  .trainers .trainer-cards-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 20%;
+    padding-right: 20%; }
+    .trainers .trainer-cards-grid .trainer-card {
+      background-color: rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      padding: 1.5rem;
+      border: 2px solid transparent;
+      text-align: center;
+      transition: all 0.5s; }
+      .trainers .trainer-cards-grid .trainer-card .trainer-icon {
+        height: 4rem; }
+      .trainers .trainer-cards-grid .trainer-card h3 {
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem; }
+      .trainers .trainer-cards-grid .trainer-card p {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 300; }
+    .trainers .trainer-cards-grid .trainer-card:hover {
+      cursor: pointer;
+      border: 2px solid #fea901;
+      transform: translateY(-1rem); }
+
+.schedule {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  box-sizing: border-box; }
+  .schedule .grid-container {
+    width: 100%;
+    box-sizing: border-box; }
+    .schedule .grid-container .schedule-filter {
+      text-decoration: none;
+      color: #fea901;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 1rem; }
+    .schedule .grid-container .week-input {
+      text-decoration: none;
+      color: #fea901;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: none;
+      transition: all 0.5s;
+      -webkit-appearance: none; }
+    .schedule .grid-container .schedule-grid {
+      width: 100%;
+      box-sizing: border-box;
+      table-layout: fixed; }
+      .schedule .grid-container .schedule-grid thead tr {
+        height: 2.5rem; }
+      .schedule .grid-container .schedule-grid tbody tr {
+        height: 5rem; }
+      .schedule .grid-container .schedule-grid .day-name {
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: #fea901;
+        color: #ffffff;
+        box-sizing: border-box; }
+      .schedule .grid-container .schedule-grid .hour {
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: #e5e5e5;
+        transition: all 0.5s;
+        box-sizing: border-box; }
+      .schedule .grid-container .schedule-grid .hour:hover {
+        background-color: #333333;
+        color: #ffffff; }
+
+.testimonials {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #333333;
+  height: 66vh;
+  overflow: hidden;
+  box-sizing: border-box; }
+  .testimonials .testimonials-img-container {
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.5s; }
+    .testimonials .testimonials-img-container img {
+      min-width: 100%;
+      height: 100%;
+      transition: all 0.5s; }
+  .testimonials .testimonials-info-container {
+    box-sizing: border-box;
+    width: 55%;
+    height: 100%;
+    padding: 5rem 10rem 5rem 10rem;
+    transition: all 0.5s; }
+    .testimonials .testimonials-info-container .title {
+      color: #ffffff;
+      text-align: start; }
+    .testimonials .testimonials-info-container .subtitle {
+      text-align: start; }
+    .testimonials .testimonials-info-container .testimonial-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #ffffff;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.5s; }
+    .testimonials .testimonials-info-container .testimonial-name {
+      color: #fea901;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.5s; }
+
+.progress {
+  width: 100%;
+  background-color: #ffffff; }
+
+.bar {
+  width: 1%;
+  height: 10px;
+  background-color: #fea901; }
+
+.feedback {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; }
+  .feedback .feedback-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; }
+    .feedback .feedback-form .feedback-data {
+      background-color: transparent;
+      border: 3px solid #000000;
+      width: 27.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      vertical-align: text-top;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      padding: 0.5rem; }
+    .feedback .feedback-form .name-input {
+      height: 1.25rem; }
+    .feedback .feedback-form .feedback-textarea {
+      resize: none; }
+    .feedback .feedback-form .send-btn {
+      height: 2.25rem;
+      width: 25rem;
+      border: none;
+      background-color: #fea901;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.75);
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.5s; }
+    .feedback .feedback-form .send-btn:hover {
+      cursor: pointer;
+      color: #ffffff; }
+
+@media only screen and (max-width: 1024px) {
+  body #to-top #circle-bg {
+    width: 6rem;
+    height: 6rem; }
+  body #to-top img {
+    width: 2.5rem; }
+  body .trainers .trainer-cards-grid {
+    padding-left: 10%;
+    padding-right: 10%; }
+  body .testimonials .testimonials-info-container {
+    padding: 1rem 1rem 1rem 1rem; } }
+
+@media only screen and (max-width: 900px) {
+  body #to-top #circle-bg {
+    width: 5.5rem;
+    height: 5.5rem; }
+  body #to-top img {
+    width: 2rem; }
+  body .classes .grid-container .class-cards-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    body .classes .grid-container .class-cards-grid .class-card {
+      grid-column: span 2; }
+  body .trainers .filter {
+    white-space: nowrap;
+    overflow: auto;
+    width: 100%; }
+    body .trainers .filter .trainer-cards-grid {
+      width: 100%; }
+      body .trainers .filter .trainer-cards-grid .trainer-card {
+        width: 10rem;
+        box-sizing: border-box;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        white-space: normal; }
+        body .trainers .filter .trainer-cards-grid .trainer-card p {
+          width: 10rem; }
+  body .schedule {
+    padding: 5% 5% 5% 5%; } }
+
+@media only screen and (max-width: 600px) {
+  body .cover {
+    background-position: center; }
+  body .classes .grid-container .class-cards-grid .class-card {
+    grid-column: span 4; }
+  body .trainers {
+    background-position: center; }
+  body .feedback .feedback-form {
+    width: 90%; }
+    body .feedback .feedback-form .feedback-data {
+      width: 90%; }
+    body .feedback .feedback-form .send-btn {
+      width: 90%; }
+  body .testimonials {
+    min-height: 66vh; }
+    body .testimonials .testimonials-img-container {
+      display: none; }
+    body .testimonials .testimonials-info-container {
+      width: 100%; } }
+
+@media only screen and (max-width: 500px) {
+  body .schedule .grid-container .schedule-filter .week-input {
+    width: 100%; } }

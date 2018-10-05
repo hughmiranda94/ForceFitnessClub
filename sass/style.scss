@@ -1,0 +1,751 @@
+@import "_constants";
+
+body {
+  background-color: $bg-color;
+  margin: 0 0 0 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+//Default Style for all paragraphs, titles and subtitles for every section (This can be overrided)
+p {
+  margin: 0 0 0 0;
+}
+
+.subtitle {
+  color: $accent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+//Scroll Up icon
+#scroll-up {
+  bottom: 1vh;
+  transform: translateX(-110%);
+  position: fixed;
+  transition: all 0.5s;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid $accent;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.75);
+  @include flex(column, center, center);
+  margin-top: 1rem;
+
+  img {
+    width: 2rem;
+    display: block;
+    -webkit-animation: pulse 1s infinite;
+    /* Safari 4+ */
+    -moz-animation: pulse 1s infinite;
+    /* Fx 5+ */
+    -o-animation: pulse 1s infinite;
+    /* Opera 12+ */
+    animation: pulse 1s infinite;
+    /* IE 10+, Fx 29+ */
+  }
+}
+#scroll-up:hover {
+  cursor: pointer;  
+  background-color: rgb(0, 0, 0);
+}
+
+//NAVIGATION BAR
+nav {
+  @include flex(row, center, center);
+  height: 10vh;
+
+  .nav-list {
+    list-style: none;
+    padding: 0 0 0 0;
+
+    .nav-item {
+      display: inline;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-weight: 500;
+
+      a {
+        text-decoration: none;
+        color: $lightgray;
+        transition: all 0.2s;
+      }
+
+      a:hover {
+        color: $accent;
+      }
+    }
+  }
+}
+
+//MAIN SECTION
+.cover {
+  @include flex(row, center, center);
+  height: 75vh;
+  background-color: black;
+  background-image: url(../assets/gym-trainer.jpg);
+  background-image: url(../assets/gym-trainer.jpg), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+  background-size: cover;
+  background-position: 0% 40%;
+  background-repeat: no-repeat;
+
+  .filter {
+
+    @include flex(row, center, center);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  }
+
+  h1 {
+    color: white;
+    font-size: 4.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    text-align: center;
+  }
+
+}
+
+//CLASSES SECTION
+.classes {
+  @include flex(column, center, center);
+  min-height: 100vh;
+  margin: 5rem 0rem 5rem 0rem;
+
+  .title {
+    color: $darkgray;
+  }
+
+  .grid-container {
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center;
+
+    .class-filter {
+      text-decoration: none;
+      color: $accent;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: none;
+
+
+
+      img {
+        height: 0.5rem;
+        margin-left: 0.25rem;
+      }
+    }
+
+    .class-filter:hover {
+      cursor: pointer;
+    }
+
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: url('../assets/dropdown.png') no-repeat 100% 50%;
+      background-size: 11px 7px;
+      width: 4.25rem;
+    }
+
+    .class-cards-grid {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .class-card {
+        background-color: $white;
+        @include flex(column, center, center);
+        border-radius: 0.5rem;
+        height: 66vh;
+        width: 16rem;
+        overflow: hidden;
+
+        .card-img-container {
+          height: 50%;
+          overflow: hidden;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        .card-info-container {
+          height: 50%;
+          width: 100%;
+          @include flex(column, center, space-between);
+          padding: 1rem;
+          box-sizing: border-box;
+
+          h3 {
+            color: $darkgray;
+            font-size: 1rem;
+            margin-top: 0;
+          }
+
+          .main-info {
+            width: 100%;
+            @include flex(row, center, space-around);
+
+            p {
+              font-size: 0.66rem;
+              color: $lightgray;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            .class-price {
+              color: $accent;
+              font-size: 2rem;
+              font-weight: 500;
+              font-family: 'Oswald', sans-serif;
+              width: 33%;
+              text-align: center;
+            }
+
+            .class-instructor {
+              @include flex(column, center, center);
+              width: 34%;
+
+              margin-bottom: 0.5rem;
+
+              .instructor-img {
+
+                overflow: hidden;
+                height: 2.5rem;
+                width: 2.5rem;
+                margin-bottom: 0.5rem;
+
+                border-radius: 50%;
+
+                img {
+                  width: 100%;
+                  min-height: 100%;
+                }
+              }
+
+            }
+
+            .class-rating {
+              @include flex(column, center, center);
+              width: 33%;
+
+              .stars {
+                width: 100%;
+                @include flex(row, center, center);
+
+                img {
+                  width: 0.66rem;
+                  margin: 0.10rem;
+                }
+              }
+            }
+          }
+
+          .full-class-btn {
+            background-color: $card-btn-bg;
+            color: $card-btn-color;
+            border-radius: 5rem;
+            border: none;
+            font-size: 0.6rem;
+            font-weight: 500;
+            font-family: 'Oswald', sans-serif;
+            width: 7rem;
+            height: 2.25rem;
+            transition: all 0.5s;
+            margin-top: 0.75rem;
+            margin-bottom: 1rem;
+          }
+
+          .full-class-btn:hover {
+            cursor: pointer;
+            background-color: $darkgray;
+          }
+
+          .class-schedule {
+            width: 100%;
+            @include flex(row, center, space-around);
+            font-size: 0.5rem;
+            color: $lightgray;
+            margin-bottom: 0.5rem;
+
+            img {
+              height: 0.5rem;
+              margin-left: 0.5rem;
+              margin-right: 0.5rem;
+            }
+          }
+
+          hr {
+            border: 2px solid $accent;
+            border-radius: 5rem;
+            width: 95%;
+          }
+        }
+      }
+
+      .hidden-card {
+        display: none;
+      }
+    }
+  }
+
+  .view-more-btn {
+    background-color: transparent;
+    border: 2px solid $accent;
+    border-radius: 5rem;
+    color: $lightgray;
+    font-size: 0.75rem;
+    font-family: 'Oswald', sans-serif;
+    width: 10rem;
+    height: 3rem;
+    transition: all 0.5s;
+  }
+
+  .view-more-btn:hover {
+    cursor: pointer;
+    background-color: $accent;
+    color: $white;
+  }
+
+}
+
+//TRAINERS SECTION
+.trainers {
+  @include flex(column, center, center);
+  min-height: 66vh;
+  background-image: url('../assets/gym-woman.jpg');
+  background-size: cover;
+  background-position: 0% 40%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+
+  .filter {
+    @include flex(row, center, center);
+    min-height: 66vh;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  }
+
+  .trainer-cards-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    .trainer-card {
+      background-color: rgba(0, 0, 0, 0.75);
+      @include flex(column, center, center);
+      color: $white;
+      padding: 1.5rem;
+      border: 2px solid transparent;
+      text-align: center;
+      transition: all 0.5s;
+
+      .trainer-icon {
+        height: 4rem;
+      }
+
+      h3 {
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 300;
+      }
+    }
+
+    .trainer-card:hover {
+      cursor: pointer;
+      border: 2px solid $accent;
+      transform: translateY(-1rem);
+    }
+  }
+
+}
+
+//SCHEDULE SECTION
+.schedule {
+  @include flex(column, center, center);
+  min-height: 100vh;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  box-sizing: border-box;
+
+  .grid-container {
+    width: 100%;
+    box-sizing: border-box;
+
+    .schedule-filter {
+      text-decoration: none;
+      color: $accent;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .week-input {
+      text-decoration: none;
+      color: $accent;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: none;
+      transition: all 0.5s;
+      -webkit-appearance: none;
+    }
+
+    .schedule-grid {
+      width: 100%;
+      box-sizing: border-box;
+      table-layout: fixed;
+
+      thead {
+        tr {
+          height: 2.5rem;
+        }
+      }
+
+      tbody {
+        tr {
+          height: 5rem;
+        }
+      }
+
+      .day-name {
+        // @include flex(column, center, center);
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: $accent;
+        color: $white;
+        box-sizing: border-box;
+      }
+
+      .hour {
+        // @include flex(column, center, center);
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: $schedule-bg;
+        transition: all 0.5s;
+        box-sizing: border-box;
+      }
+
+      .hour:hover {
+        background-color: $darkgray;
+        color: $white;
+      }
+    }
+  }
+}
+
+//TESTIMONIALS SECTION
+.testimonials {
+  @include flex(row, center, center);
+  background-color: $darkgray;
+  height: 66vh;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  .testimonials-img-container {
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    img {
+      min-width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+    }
+  }
+
+  .testimonials-info-container {
+    box-sizing: border-box;
+    width: 55%;
+    height: 100%;
+    padding: 5rem 10rem 5rem 10rem;
+
+    transition: all 0.5s;
+
+    .title {
+      color: $white;
+      text-align: start;
+    }
+
+    .subtitle{
+      text-align: start;
+    }
+
+    .testimonial-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: $white;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.5s;
+    }
+
+    .testimonial-name {
+      color: $accent;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.5s;
+    }
+  }
+}
+
+//Progress Bar - Empty
+.progress {
+  width: 100%;
+  background-color: $white;
+}
+//Progress Bar - Fill
+.bar {
+  width: 1%;
+  height: 10px;
+  background-color: $accent;
+}
+
+//FEEDBACK SECTION
+.feedback {
+  height: 100vh;
+  @include flex(column, center, center);
+  padding: 1rem;
+
+  .feedback-form {
+    @include flex(column, center, center);
+
+    .feedback-data {
+      background-color: transparent;
+      border: 3px solid $black;
+      width: 27.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      vertical-align: text-top;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      padding: 0.5rem;
+    }
+
+    .name-input {
+      height: 1.25rem;
+    }
+
+    .feedback-textarea {
+      resize: none;
+    }
+
+    .send-btn {
+      height: 2.25rem;
+      width: 25rem;
+      border: none;
+      background-color: $accent;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.75);
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.5s;
+    }
+
+    .send-btn:hover {
+      cursor: pointer;
+      color: $white;
+    }
+  }
+}
+
+
+//Responsive
+
+@media only screen and (max-width: 1024px) {
+
+  body {
+    #to-top {
+      #circle-bg {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      img {
+        width: 2.5rem;
+      }
+    }
+
+    .trainers {
+      .trainer-cards-grid {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+    }
+
+    .testimonials {
+      .testimonials-info-container {
+
+        padding: 1rem 1rem 1rem 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  body {
+    #to-top {
+      #circle-bg {
+        width: 5.5rem;
+        height: 5.5rem;
+      }
+
+      img {
+        width: 2rem;
+      }
+    }
+
+    .classes {
+
+      .grid-container {
+
+        .class-cards-grid {
+
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+
+          .class-card {
+            grid-column: span 2;
+          }
+        }
+      }
+
+    }
+
+    .trainers {
+      .filter {
+        white-space: nowrap;
+        overflow: auto;
+        width: 100%;
+
+        .trainer-cards-grid {
+          width: 100%;
+
+          .trainer-card {
+            width: 10rem;
+            box-sizing: border-box;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            white-space: normal;
+
+            p {
+              width: 10rem;
+            }
+          }
+        }
+      }
+    }
+
+    .schedule {
+      padding: 5% 5% 5% 5%;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  body {
+
+    .cover {
+      background-position: center;
+    }
+
+    .classes {
+
+      .grid-container {
+
+        .class-cards-grid {
+
+          .class-card {
+            grid-column: span 4;
+          }
+        }
+      }
+
+    }
+
+    .trainers {
+      background-position: center;
+    }
+
+    .feedback {
+      .feedback-form {
+        width: 90%;
+
+        .feedback-data {
+          width: 90%;
+        }
+
+        .send-btn {
+          width: 90%;
+        }
+      }
+    }
+
+    .testimonials {
+      min-height: 66vh;
+
+      .testimonials-img-container {
+        display: none;
+      }
+
+      .testimonials-info-container {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    .schedule {
+      .grid-container {
+        .schedule-filter {
+          .week-input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

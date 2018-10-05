@@ -1,0 +1,19 @@
+{
+  "name": "forcefitnessclub",
+  "version": "1.0.0",
+  "description": "Force Fitness Club",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hugo Miranda",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.24.7",
+    "firebase": "^5.5.2"
+  },
+  "devDependencies": {
+    "gulp-typescript": "^5.0.0-alpha.3",
+    "typescript": "^3.1.1"
+  }
+}

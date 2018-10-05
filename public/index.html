@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Force Fitness Club</title>
+  <link rel="icon" href="assets/flex.png">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body onscroll="checkBodyScroll();" onload="let start=setInterval('changeTestimonial()', 10000); moveProgressBar();">
+    <div id="scroll-up">
+      <img src="assets/top.png" id="img1">
+    </div>
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#" onclick="scrollHome()">HOME</a></li>
+      <li class="nav-item"><a href="#" onclick="scrollClasses()">CLASSES</a></li>
+      <li class="nav-item"><a href="#" onclick="scrollSchedule()">SCHEDULE</a></li>
+      <li class="nav-item"><a href="#" onclick="scrollFeedback()">FEEDBACK</a></li>
+    </ul>
+  </nav>
+
+  <div class="cover" id="home-title">
+    <div class="filter">
+      <h1>THE FORCE FITNESS CLUB</h1>
+    </div>
+  </div>
+  <div class="classes" id="classes-title">
+    <p class="subtitle">DISCOVER</p>
+    <h2 class="title">OUR CLASSES</h2>
+    <div class="grid-container">
+      <select class="class-filter" id="class-filter">
+        <option value="by-price">BY PRICE</option>
+        <option value="by-rating">BY RATING</option>
+        <option value="by-date">BY DATE</option>
+      </select>
+      <div class="class-cards-grid" id="class-cards-grid">
+      </div>
+    </div>
+    <button class="view-more-btn" id="view-more-btn" onclick="viewClassCards(true);">VIEW MORE</button>
+  </div>
+  <div class="trainers">
+    <div class="filter">
+      <div class="trainer-cards-grid" id="trainer-cards-grid">
+      </div>
+    </div>
+  </div>
+  <div class="schedule" id="schedule-title">
+    <p class="subtitle">FOLLOW</p>
+    <h2 class="title">YOUR SCHEDULE</h2>
+    <div class="grid-container">
+      <input type="week" id="schedule-week" value="2018-W01" class="week-input" required>
+      <table class="schedule-grid" id="schedule-grid">
+      </table>
+    </div>
+  </div>
+  <div class="testimonials">
+    <div class="testimonials-img-container" id="testimonials-img-container">
+      <img src="assets/testimonial-0.jpg" id="testimonial-img">
+    </div>
+    <div class="testimonials-info-container" id="testimonials-info-container">
+      <p class="subtitle">FEEDBACK</p>
+      <h2 class="title">TESTIMONIALS</h2>
+      <p class="testimonial-text" id="testimonial-txt">
+        Pellentesque habitant morbi
+        tristique senectus et netus et
+        malesuada fames ac turpis
+        egestas.vesibulum tor tor quam,
+        feugat vitae, ultrices tempor sit
+        amet ante. donec eu libero vitae.
+        malesuada fames ac turpis
+        egestas.vesibulum tor tor quam,
+        feugat vitae, ultrices tempor sit
+        amet ante. donec eu libero vitae.
+      </p>
+      <p class="testimonial-name" id="testimonial-name">
+        PBERT LUFFY
+      </p>
+    </div>
+  </div>
+  <div id="progress" class="progress">
+    <div id="bar" class="bar"></div>
+  </div>
+  <div class="feedback" id="feedback-title">
+    <form class="feedback-form" id="feedback-form">
+      <h2 class="title">GIVE YOUR FEEDBACK</h2>
+      <input type="text" placeholder="NAME" class="feedback-data name-input" 
+      name="form-name" id="form-name" required>
+      <textarea class="feedback-data feedback-textarea" placeholder="FEEDBACK..." 
+      rows="7" name="form-feedback" id="form-feedback"
+        maxlength="300" required></textarea>
+      <button type="submit" class="send-btn">SEND</button>
+    </form>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+  <script src="scroll.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
