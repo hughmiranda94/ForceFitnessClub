@@ -1,16 +1,3 @@
-// import firebase from "firebase";
-
-// // Initialize Firebase
-// var config = {
-//   apiKey: "AIzaSyA61oMoOE3AxZcTSOc7rnCNmCExD8S0heA",
-//   authDomain: "forcefitnessclub-128df.firebaseapp.com",
-//   databaseURL: "https://forcefitnessclub-128df.firebaseio.com",
-//   projectId: "forcefitnessclub-128df",
-//   storageBucket: "forcefitnessclub-128df.appspot.com",
-//   messagingSenderId: "275800715940"
-// };
-// firebase.initializeApp(config);
-
 let feedbackForm = document.getElementById('feedback-form');
 let testimonialImg = document.getElementById('testimonial-img');
 let testimonialTxt = document.getElementById('testimonial-txt');
