@@ -50,7 +50,7 @@ let numberOfStars;
 let hiddenCard;
 let numDate;
 let month;
-//Array constants for default values
+//Constant arrays for default values
 const testimonialImgPool = [
     'testimonial-0.jpg',
     'testimonial-1.jpg',
